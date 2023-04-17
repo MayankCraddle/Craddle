@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="VideoCollCell" id="gTV-IL-0wX" customClass="VideoCollCell" customModule="SaharaGo" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="379" height="184"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="379" height="184"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mpx-gQ-HXJ" customClass="YTPlayerView">
+                        <rect key="frame" x="0.0" y="0.0" width="379" height="184"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fBM-Q4-thW">
+                        <rect key="frame" x="169.5" y="72" width="40" height="40"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="40" id="LhZ-jL-pf2"/>
+                            <constraint firstAttribute="width" constant="40" id="Obh-gX-Ziu"/>
+                        </constraints>
+                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                        <state key="normal" image="play"/>
+                        <connections>
+                            <action selector="playAction:" destination="gTV-IL-0wX" eventType="touchUpInside" id="3b7-aU-bf7"/>
+                        </connections>
+                    </button>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstItem="fBM-Q4-thW" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="7dx-pR-O78"/>
+                <constraint firstAttribute="bottom" secondItem="Mpx-gQ-HXJ" secondAttribute="bottom" id="Ma1-SG-k50"/>
+                <constraint firstItem="fBM-Q4-thW" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="See-Am-xLB"/>
+                <constraint firstItem="Mpx-gQ-HXJ" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="iEh-RS-n0T"/>
+                <constraint firstAttribute="trailing" secondItem="Mpx-gQ-HXJ" secondAttribute="trailing" id="naO-VD-HIC"/>
+                <constraint firstItem="Mpx-gQ-HXJ" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="pdL-sq-FPL"/>
+            </constraints>
+            <size key="customSize" width="379" height="184"/>
+            <connections>
+                <outlet property="playBtn" destination="fBM-Q4-thW" id="Yc1-7f-Y7u"/>
+                <outlet property="playerView" destination="Mpx-gQ-HXJ" id="3iB-YT-CAU"/>
+            </connections>
+            <point key="canvasLocation" x="376.08695652173918" y="157.36607142857142"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="play" width="135" height="135"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
